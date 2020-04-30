@@ -50,7 +50,11 @@ var server = http.createServer(function(request, response){
   }else {
     response.statusCode = 404
     response.setHeader('Content-Type', 'text/html; charset=utf-8')
-    response.write(`呜呜呜`)
+    response.write(`
+    {
+      "error":"失败！"
+    }
+    `)
     response.end()
   }
 
